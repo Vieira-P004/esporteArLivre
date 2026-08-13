@@ -50,8 +50,8 @@ button{
 
 #btnAdd{
     margin-right: 10px;
-    background-color: chartreuse;
-    color: aliceblue;
+    background-color: rgb(169, 255, 84);
+    color: rgb(0, 0, 0);
 }
 
 #btnLimpar{
