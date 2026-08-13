@@ -1,0 +1,26 @@
+#divHome{
+    width: 100px;
+    height: 650px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border: 1px solid grey;
+}
+
+p{
+    text-transform: uppercase;
+    font-size: 100px;
+    text-decoration: dashed;
+}
+
+#tituloNome{
+    text-transform: uppercase;
+    margin: 0px 20px;
+    color: aliceblue;
+    border: 1px solid grey;
+    padding: 25px;
+    background-color: brown;
+    letter-spacing: 5px;
+}
