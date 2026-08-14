@@ -1,7 +1,7 @@
 export class Pessoa{
     id: number = 0
     nome: String = ''
-    cpf = number = 0
+    cpf: number = 0
     sexo: String = ''
     cep: number = 0
     ruaLogradouro = ''
