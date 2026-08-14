@@ -43,5 +43,19 @@ export class AtletaComponent {
 
     this.atletaService.adicionar(pessoaAtleta)
 
+    this.limparAtributos()
+
   }
+
+  limparAtributos(){
+    this.nome = ''
+    this.cpf = 0
+    this.sexo = ''
+    this.cep = 0
+    this.ruaLogradouro = ''
+    this.bairro = ''
+    this.cidade = ''
+    this.uf = ''
+  }
+
 }
