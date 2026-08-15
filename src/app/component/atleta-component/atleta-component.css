@@ -3,20 +3,27 @@
     min-height: 650px;
     margin: 20px auto;
     padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20);
+    border-radius: 5px;
 
 }
 
 label{
-    display: block;
     padding: 15px 0px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+
+}
+
+#nome{
+    width: 980px;
 }
 
 input{
     height: 35px;
     padding: 10px;
     font-size: 14px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 input[type=radio]{
@@ -50,12 +57,16 @@ button{
 
 #btnAdd{
     margin-right: 10px;
-    background-color: rgb(169, 255, 84);
-    color: rgb(0, 0, 0);
+    background-color: var(--botao);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
 }
 
 #btnLimpar{
     margin-left: 10px;
-    background-color: chartreuse;
-    color: aliceblue;
+    background-color: var(--botao);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
 }

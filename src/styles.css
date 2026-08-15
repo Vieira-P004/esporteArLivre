@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --cabecalho: #054970;
+    --botao: #07659C;
+}
+
+@font-face{
+    font-family: 'Boris Black Bloxx';
+    src: url(../src/font/BorisBlackBloxx.ttf) format(truetype);
+}

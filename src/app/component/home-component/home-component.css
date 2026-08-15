@@ -1,18 +1,21 @@
 #divHome{
-    width: 100px;
+    width: 1000px;
     height: 650px;
     margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    border: 1px solid grey;
+    border-radius: 7px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20)
 }
 
 p{
     text-transform: uppercase;
     font-size: 100px;
     text-decoration: dashed;
+    font-family: 'Boris Black Bloxx', sans-serif;
 }
 
 #tituloNome{
@@ -21,6 +24,7 @@ p{
     color: aliceblue;
     border: 1px solid grey;
     padding: 25px;
-    background-color: brown;
+    background-color:var(--cabecalho);
     letter-spacing: 5px;
+    font-family: 'Boris Black Bloxx', sans-serif;
 }

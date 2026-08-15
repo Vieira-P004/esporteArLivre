@@ -1,0 +1,39 @@
+#divForm{
+    width: 1000px;
+    min-height: 300px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20)
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+}
+
+#descricaoCorrida{
+    border-radius: 5px;
+    width: 1000px;
+    height: 100px;
+}
+
+#dataCorrida{
+    width: 1000px;
+    height: 35px;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    margin-top: 20px;
+    background-color: #07659C;
+    color: #ffffff;
+    border: none;
+}
+
+button:hover{
+    background-color: #0982C8;
+}
