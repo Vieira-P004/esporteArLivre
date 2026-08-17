@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 :root{
     --cabecalho: #054970;
     --botao: #07659C;
