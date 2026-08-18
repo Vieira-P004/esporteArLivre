@@ -1,4 +1,4 @@
-export class Pessoa{
+export class Atleta{
     id: number = 0
     nome: String = ''
     cpf: number = 0
