@@ -62,7 +62,7 @@ export class ListarCorrida {
 
   //ALTERAR DADOS
   buscarAtleta(idAtleta: Atleta){
-    this.router.navigate(['/cadastroatleta', idAtleta])
+    this.router.navigate(['/cadastroAtleta', idAtleta])
   }
 
   
