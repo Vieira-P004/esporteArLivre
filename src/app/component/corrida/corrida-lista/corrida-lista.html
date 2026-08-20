@@ -1,0 +1,26 @@
+<div id="divLista">
+    <h2>Lista Corrida</h2>
+
+    <div id="listaCorrida">
+        <div class="itemCorrida">
+
+            @for(){
+                <span class="dadosCorrida">
+                    <span class="dadosCorrida" >
+                        elem.id -  elem.nome - elem.sexo - elem.cidade - elem.uf
+                    </span>
+                    <span class="linksLista">
+                        <a href="" class="linkEditar">Editar</a>
+                        <a href="" class="linkExcluir">Excluir</a>
+                    </span>
+                </span>
+
+            }@empty{
+                <div class="divItemCorrida">
+                    NENHUM REGISTRO NA LISTA
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

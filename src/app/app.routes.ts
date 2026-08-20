@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 
 import { AtletaComponent } from './component/atleta-component/atleta-component';
 import { HomeComponent } from './component/home-component/home-component';
-import { CorridaComponent } from './component/corrida-component/corrida-component';
+import { CorridaComponent } from './component/corrida/corrida-component/corrida-component';
 import { ListarCorrida } from './component/listar-corrida/listar-corrida';
 
 export const routes: Routes = [
