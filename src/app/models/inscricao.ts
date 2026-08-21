@@ -1,9 +1,9 @@
 export class InscricaoModels{
     id: number = 0
-    atletaCadastrado: string = ''
+    atletaCadastrado: boolean = false
     buscarCpf = ''
-    corridaEscolhida: string = ''
-    distaciaDisponiveis: string = '' 
+    corridaEscolhida: boolean = false
+    distaciaDisponiveis: boolean = false 
     kit: string = ''
     categoriaIdade = ''
     

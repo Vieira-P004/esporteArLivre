@@ -7,7 +7,7 @@
                 <label for="atletaCadastrado">Atleta Cadastrado</label>
                 <select name="atletaCadastrado" id="">
                 <option value="" disabled selected>Selecione o Atleta</option>
-                <option value="fulano">Fulano</option>
+                <option ngFor="let atleta of atletas" value="atleta.id" >{{atleta.nome}}</option>
                 </select>
             </div>
             
@@ -23,7 +23,7 @@
                 <label for="corridaEscolhida">Corrida Escolhida</label>
                 <select name="corridaEscolhida" id="corridaEscolhida" placeholder="Selecione o atleta">
                     <option value="" disabled selected>Selecione</option>
-                    <option value="">Fuga das galinhas</option>
+                    <option ngFor="let corrida of corrida" value="corrida.id">{{corrida.nome}}</option>
                 </select>
             </div>
     
