@@ -1,41 +1,63 @@
 <div id="divForm">
     <h2>Inscrição</h2>
     <form id="formInscricao">
-        <label for="atletaCadastrado">Atleta Cadastrado</label>
-        <select name="atletaCadastrado" id="">
-            <option value="fulano">Fulano</option>
-        </select>
+        
+        <div class="formRow">
+            <div class="formGroup">
+                <label for="atletaCadastrado">Atleta Cadastrado</label>
+                <select name="atletaCadastrado" id="">
+                <option value="fulano">Fulano</option>
+                </select>
+            </div>
+            
+            <div class="formGroup">
+                <label for="buscarCpf">Buscar por CPF</label>
+                <input type="text" name="buscarCpf" id="buscarCpf">
+    
+            </div>
+        </div>
+        
+        <div class="formRow">
+            <div class="formGroup">
+                <label for="corridaEscolhida">Corrida Escolhida</label>
+                <select name="corridaEscolhida" id="corridaEscolhida">
+                    <option value="corrida">Fuga das galinhas</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="distaciaDisponiveis">Distância Disponíveis </label>
+                <input type="checkbox" id="distancia5km" > 5km
+                <input type="checkbox" id="distancia10km" > 10km
+                <input type="checkbox" id="distancia25km" > 25km
+            </div>
 
-        <label for="buscarCpf">Buscar por CPF</label>
-        <input type="text" name="buscarCpf" id="buscarCpf">
-
-        <label for="corridaEscolhida">Corrida Escolhida</label>
-        <select name="corridaEscolhida" id="corridaEscolhida">
-            <option value="corrida">Fuga das galinhas</option>
-        </select>
-
-        <label for="distaciaDisponiveis">Distância Disponíveis </label>
-        <input type="checkbox" id="distancia5km" > 5km
-        <input type="checkbox" id="distancia10km" > 10km
-        <input type="checkbox" id="distancia25km" > 25km
-
-        <label for="kit">Tamanho da camiseta (kit)</label>
-        <select name="kit" id="kit">
-            <option value="P">P</option>
-            <option value="M">M</option>
-            <option value="G">G</option>
-            <option value="GG">GG</option>
-        </select>
-
-        <label for="categoriaIdade">Categoria</label>
-        <input type="text" name="categoriaIdade" id="categoriaIdade" placeholder="Geral Masc / 30-39">
-
-        <div>
-            <h2>Valor da inscrição:</h2>
-            <h2>89,90</h2>
+        </div>
+        
+        <div class="formOther">
+            <div class="formGroup">
+                <label for="kit">Tamanho da camiseta (kit)</label>
+                <select name="kit" id="kit">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+    
+            </div>
+            <div class="formGroup">
+                <label for="categoriaIdade">Categoria</label>
+                <input type="text" name="categoriaIdade" id="categoriaIdade" placeholder="Geral Masc / 30-39">
+    
+            </div>
         </div>
 
-        <div>
+        <div id="valorInscricao">
+            <h2>Valor da inscrição:</h2>
+            <h2 id="numero">89,90</h2>
+        </div>
+
+        <div id="regulamento">
             <input type="checkbox">Li e aceito os termos de regulamento da prova e declaração de saúde.
         </div>
 
