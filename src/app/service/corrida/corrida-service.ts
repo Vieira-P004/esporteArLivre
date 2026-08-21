@@ -13,59 +13,35 @@ export class CorridaService {
     }
 
     salvarCorrida(corrida: Corrida){
-        let resposta =  ''
         const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/`
 
-        this.http.post<Corrida>(urlApi, corrida)
-        .subscribe({
-            next:(respostaAPI)=> {
-                return respostaAPI
-            },
-            error:(msgErro)=>{
-                return msgErro
-            }
-        })
+        return this.http.post<Corrida>(urlApi, corrida)
+       
+    }
+
+    listarCorridas(){
+        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun`
+
+        return this.http.get<Corrida[]>(urlApi)
     }
 
     listarCorrida(idCorrida: Number){
         const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${idCorrida}`
 
-        this.http.get<Corrida[]>(urlApi)
-        .subscribe({
-            next: (respostaApi) => {
-                return respostaApi
-            },
-            error: (msgErro) => {
-                return msgErro
-            }
-        })
+        return this.http.get<Corrida>(urlApi)
     }
 
     excluirCorrida(idCorrida: Number){
         const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${idCorrida}`
 
-        this.http.delete<Corrida>(urlApi)
-        .subscribe({
-            next: (respostaApi) => {
-                return respostaApi
-            },
-            error: (msgErro) => {
-                msgErro
-            }
-        })
+        return this.http.delete<Corrida>(urlApi)
+        
     }
 
     alterarCorrida(corrida: Corrida){
         const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${corrida.id}`
 
-        this.http.delete<Corrida>(urlApi)
-        .subscribe({
-            next: (respostaApi) => {
-                return respostaApi
-            },
-            error: (msgErro) => {
-                msgErro
-            }
-        })
+        return this.http.put<Corrida>(urlApi, corrida)
+    
     }
 }

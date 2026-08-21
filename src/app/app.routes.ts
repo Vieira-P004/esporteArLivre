@@ -26,6 +26,9 @@ export const routes: Routes = [
         component:CorridaComponent
     },
     {
+        path: "alterarCorrida",
+    },
+    {
         path:"listarCorrida",
         component:ListarCorrida
     }

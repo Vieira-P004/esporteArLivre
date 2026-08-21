@@ -2,25 +2,28 @@
     <h2>Lista Corrida</h2>
 
     <div id="listaCorrida">
-        <div class="itemCorrida">
+        
 
-            @for(){
-                <span class="dadosCorrida">
-                    <span class="dadosCorrida" >
-                        elem.id -  elem.nome - elem.sexo - elem.cidade - elem.uf
+            @for(elem of listarCorridas(); track elem.id){
+                <div class="itemCorrida"> 
+                    <span class="dadosCorrida">
+                        <span class="dadosCorrida" >
+                            {{elem.descricaoCorrida}} - {{elem.dataCorrida}} - Distâncias: {{elem.distancia5km ? '5km':''}} 
+                            {{elem.distancia10km ? ' 10km':''}}
+                            {{elem.distancia25km ? ' 25KM' :''}}
+                        </span>
+                        <span class="linksLista">
+                            <a class="linkEditar">Editar</a>
+                            <a class="linkExcluir">Excluir</a>
+                        </span>
                     </span>
-                    <span class="linksLista">
-                        <a href="" class="linkEditar">Editar</a>
-                        <a href="" class="linkExcluir">Excluir</a>
-                    </span>
-                </span>
-
+                </div>
             }@empty{
                 <div class="divItemCorrida">
                     NENHUM REGISTRO NA LISTA
                 </div>
             }
 
-        </div>
+        
     </div>
 </div>
