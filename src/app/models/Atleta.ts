@@ -1,6 +1,7 @@
 export class Atleta{
     id: number = 0
     nome: String = ''
+    data_nascimento: String = ''
     cpf: number = 0
     sexo: String = ''
     cep: number = 0

@@ -40,7 +40,7 @@ export const routes: Routes = [
         component:CorridaComponent
     },
     {
-        path:"listarCorrida",
+        path:"listarCorridas",
         component:CorridaLista
     },
     {

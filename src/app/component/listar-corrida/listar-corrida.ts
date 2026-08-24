@@ -3,6 +3,7 @@ import { AtletaService } from '../../service/atleta-service';
 import { Atleta } from '../../models/Atleta';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-listar-corrida',
   imports: [],
@@ -16,7 +17,10 @@ export class ListarCorrida {
   listaAtletas = signal<Atleta[]>([])
 
   //DECLARAÇÃO CONSTRUTOR
-  constructor(private router: Router, private http: AtletaService) { }
+  constructor(  
+    private router: Router, 
+    private http: AtletaService,
+  ) {}
 
   //EXECUTAR INSTRUÇÕES AO CARREGAR CRIAR O COMPONENTE
   ngOnInit() {
@@ -60,10 +64,23 @@ export class ListarCorrida {
     this.ngOnInit()
   }
 
+    calcularIdade(data_nascimento: string): number{
+    const nascimento = new Date(data_nascimento)
+    const hoje =  new Date()
+
+    let idade = hoje.getFullYear() - nascimento.getFullYear()
+    const mes = hoje.getMonth() - nascimento.getDate()
+
+    if(mes < 0 || mes === 0 && hoje.getDate() < nascimento.getDate()){
+      idade--
+    }
+    return idade
+  }
+
   //ALTERAR DADOS
   buscarAtleta(idAtleta: Atleta){
     this.router.navigate(['/cadastroAtleta', idAtleta])
   }
 
   
-}//FIM COMPONENT AtletaListaComponent
+}

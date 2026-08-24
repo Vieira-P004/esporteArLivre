@@ -88,9 +88,9 @@ export class Inscricao {
     this.atletaCadastrado = false
     this.buscarCpf = ''
     this.corridaEscolhida = false
-    this.  distancia5km = false;
-  this.distancia10km = false;
-  this.distancia25km = false;
+    this.distancia5km = false;
+    this.distancia10km = false;
+    this.distancia25km = false;
     this.kit = ''
     this.categoriaIdade = ''
   }
@@ -127,12 +127,6 @@ export class Inscricao {
 
     if(atletaSelecionado){
       this.buscarCpf = String(atletaSelecionado.cpf)
-
-      console.log('Atleta selecionado:', atletaSelecionado);
-      console.log('CPF:', atletaSelecionado.cpf);
-
-      console.log(atletaSelecionado)
-      console.log(atletaSelecionado?.cpf)
     }
   }
 }

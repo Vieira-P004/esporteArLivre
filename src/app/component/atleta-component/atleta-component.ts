@@ -14,6 +14,7 @@ export class AtletaComponent {
 
   id = 0
   nome = ''
+  data_nascimento = ''
   cpf = 0
   sexo = ''
   cep = 0
@@ -26,7 +27,10 @@ export class AtletaComponent {
   idAtleta = 0
 
   //changeDetector
-   constructor(private atletaService: AtletaService, private route: ActivatedRoute, private cdr: ChangeDetectorRef) { }
+   constructor(
+    private atletaService: AtletaService, 
+    private route: ActivatedRoute, 
+    private cdr: ChangeDetectorRef) { }
   
 
   //DECLARANDO AS FUNÇÕES
@@ -52,6 +56,7 @@ export class AtletaComponent {
         next: (objAtleta) => {
           this.id = objAtleta.id
           this.nome = String(objAtleta.nome)
+          this.data_nascimento = String(objAtleta.data_nascimento)
           this.cpf = objAtleta.cpf
           this.sexo = String(objAtleta.sexo)
           this.cep = objAtleta.cep
@@ -71,6 +76,7 @@ export class AtletaComponent {
      const pessoaAtleta = new Atleta()
 
     pessoaAtleta.nome = this.nome
+    pessoaAtleta.data_nascimento = this.data_nascimento
     pessoaAtleta.cpf = this.cpf
     pessoaAtleta.sexo = this.sexo
     pessoaAtleta.cep = this.cep
