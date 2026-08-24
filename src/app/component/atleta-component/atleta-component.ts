@@ -35,7 +35,7 @@ export class AtletaComponent {
 
   //DECLARANDO AS FUNÇÕES
   exibirDados(){
-    console.log(this.nome, this.cpf, this.cep, this.sexo, this.ruaLogradouro, this.bairro, this.cidade, this.uf)
+    console.log(this.nome,this.data_nascimento ,this.cpf, this.cep, this.sexo, this.ruaLogradouro, this.bairro, this.cidade, this.uf)
   }
 
   //Professor
@@ -55,12 +55,12 @@ export class AtletaComponent {
       .subscribe({
         next: (objAtleta) => {
           this.id = objAtleta.id
-          this.nome = String(objAtleta.nome)
-          this.data_nascimento = String(objAtleta.data_nascimento)
+          this.nome = objAtleta.nome
+          this.data_nascimento = objAtleta.data_nascimento
           this.cpf = objAtleta.cpf
-          this.sexo = String(objAtleta.sexo)
+          this.sexo = objAtleta.sexo
           this.cep = objAtleta.cep
-          this.ruaLogradouro = objAtleta.ruaLogradouro
+          this.ruaLogradouro = objAtleta.rua_logradouro
           this.bairro = objAtleta.bairro
           this.cidade = objAtleta.cidade
           this.uf = objAtleta.uf
@@ -80,7 +80,7 @@ export class AtletaComponent {
     pessoaAtleta.cpf = this.cpf
     pessoaAtleta.sexo = this.sexo
     pessoaAtleta.cep = this.cep
-    pessoaAtleta.ruaLogradouro = this.ruaLogradouro
+    pessoaAtleta.rua_logradouro = this.ruaLogradouro
     pessoaAtleta.bairro = this.bairro
     pessoaAtleta.cidade = this.cidade
     pessoaAtleta.uf = this.uf
@@ -129,6 +129,7 @@ export class AtletaComponent {
 
   limparAtributos(){
     this.nome = ''
+    this.data_nascimento = ''
     this.cpf = 0
     this.sexo = ''
     this.cep = 0

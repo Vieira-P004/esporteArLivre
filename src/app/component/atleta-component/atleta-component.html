@@ -8,8 +8,8 @@
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" [(ngModel)] ="nome" id="nome" class="input01" maxlength="80" placeholder="Informe seu nome">
 
-                <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" name="data_nascimento" id="dataNascimento" class="input01">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input type="date" name="data_nascimento" id="data_nascimento" [(ngModel)] ="data_nascimento" class="input01">
             </div>
 
             <div class="formRow">
@@ -34,8 +34,8 @@
                     <input type="text" name="cep" [(ngModel)]="cep" id="cep" class="input02" maxlength="9" placeholder="Informe seu cep">
                 </div>
                 <div class="formGroup">
-                    <label for="ruaLogradouro">Logradouro</label>
-                    <input type="text" name="ruaLogradouro" [(ngModel)]="ruaLogradouro" id="ruaLogradouro" class="input01" maxlength="100" placeholder="Informe seu logradouro">
+                    <label for="rua_logradouro">Logradouro</label>
+                    <input type="text" name="rua_logradouro" [(ngModel)]="ruaLogradouro" id="rua_logradouro" class="input01" maxlength="100" placeholder="Informe seu logradouro">
                 </div>
             </div>
 

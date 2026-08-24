@@ -65,7 +65,7 @@ export class ListarCorrida {
   }
 
     calcularIdade(data_nascimento: string): number{
-    const nascimento = new Date(data_nascimento)
+    const nascimento = new Date (data_nascimento)
     const hoje =  new Date()
 
     let idade = hoje.getFullYear() - nascimento.getFullYear()
@@ -74,6 +74,8 @@ export class ListarCorrida {
     if(mes < 0 || mes === 0 && hoje.getDate() < nascimento.getDate()){
       idade--
     }
+
+    console.log('datinha: ',data_nascimento)
     return idade
   }
 
