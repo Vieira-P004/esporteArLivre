@@ -64,7 +64,7 @@ export class ListarCorrida {
     this.ngOnInit()
   }
 
-    calcularIdade(data_nascimento: string): number{
+  calcularIdade(data_nascimento: string): number{
     const nascimento = new Date (data_nascimento)
     const hoje =  new Date()
 
