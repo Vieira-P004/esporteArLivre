@@ -13,14 +13,14 @@ label{
     margin-top: 15px;
 }
 
-#descricaoCorrida{
+#descricao_corrida{
     border-radius: 5px;
     width: 1000px;
     height: 100px;
     border: 1px solid #d1d5db;
 }
 
-#dataCorrida{
+#data_corrida{
     width: 1000px;
     height: 35px;
     border: 1px solid #d1d5db;

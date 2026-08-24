@@ -1,20 +1,20 @@
 <div id="divForm">
     <h2>Cadastro de Corrida</h2>
     <form id="formCorrida" (submit)="dadosFormulario()">
-        <label for="descricaoCorrida">Descrição da Corrida</label>
-        <textarea name="descricaoCorrida" [(ngModel)]="descricaoCorrida" id="descricaoCorrida" cols="30" rows="10" placeholder="Ex: 5ª Night Race"></textarea>
+        <label for="descricao_corrida">Descrição da Corrida</label>
+        <textarea name="descricao_corrida" [(ngModel)]="descricao_corrida" id="descricao_corrida" cols="30" rows="10" placeholder="Ex: 5ª Night Race"></textarea>
 
-        <label for="dataCorrida">Data da Corrida</label>
-        <input type="date" [(ngModel)]="dataCorrida" id="dataCorrida">
+        <label for="data_corrida">Data da Corrida</label>
+        <input type="date"  name="data_corrida" [(ngModel)]="data_corrida" id="data_corrida">
 
         <label for="distaciaDisponiveis">Distância Disponíveis </label>
-        <input type="checkbox" id="distancia5km" [(ngModel)]="distancia5km" > 5km
-        <input type="checkbox" id="distancia10km" [(ngModel)]="distancia10km" > 10km
-        <input type="checkbox" id="distancia25km" [(ngModel)]="distancia25km" > 25km
+        <input type="checkbox" name="distancia5km" id="distancia5km" [(ngModel)]="distancia5km" > 5km
+        <input type="checkbox" name="distancia10km" id="distancia10km" [(ngModel)]="distancia10km" > 10km
+        <input type="checkbox" name="distancia25km" id="distancia25km" [(ngModel)]="distancia25km" > 25km
 
 
         <div id="divBtn">
-            <button type="submit">Cadastrar Corrida</button>
+            <button type="submit" id="btnAdd" >{{editar? 'Alterar': 'Cadastrar'}} Corrida </button>
         </div>
     </form>
 </div>

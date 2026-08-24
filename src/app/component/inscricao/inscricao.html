@@ -5,10 +5,17 @@
         <div class="formRow">
             <div class="formGroup">
                 <label for="atletaCadastrado">Atleta Cadastrado</label>
-                <select name="atletaCadastrado" id="atletaCadastrado" [(ngModel)]="id" (change)="preencherCpf()">
-                <option value="" disabled selected>Selecione o Atleta</option>
-                @for (atleta of atletas; track atleta.id) {
-                <option value="atleta.id" > {{atleta.nome}}  </option>
+                <select
+                name="atletaCadastrado" 
+                id="atletaCadastrado" 
+                [(ngModel)]="id" 
+                (ngModelChange)="preencherCpf($event)">
+
+                <option value="" disabled selected>Selecione o Atleta
+                </option>
+
+                @for (atleta of atletas; track $index) {
+                <option [value]="atleta.id" > {{atleta.nome}}  </option>
                 }
                 </select>
             </div>
@@ -25,17 +32,17 @@
                 <select name="corridaEscolhida" id="corridaEscolhida" placeholder="Selecione o atleta">
                     <option value="" disabled selected>Selecione</option>
 
-                    @for (corrida of corridas; track corrida.descricaoCorrida){
-                    <option ngFor="let corrida of corrida" value="corrida.id">{{corrida.descricaoCorrida}}</option>
+                    @for (corrida of corridas; track corrida.id){
+                    <option value="corrida.id">{{corrida.descricao_corrida}}</option>
                     }
                 </select>
             </div>
     
             <div>
                 <label for="distaciaDisponiveis">Distância Disponíveis </label>
-                <input type="checkbox" id="distancia5km" > 5km
-                <input type="checkbox" id="distancia10km" > 10km
-                <input type="checkbox" id="distancia25km" > 25km
+                <input type="radio" id="distancia5km" name="distancia5km" value="5km">5km
+                <input type="radio" id="distancia10km" name="distancia10km" > 10km
+                <input type="radio" id="distancia25km" name="distancia25km" > 25km
             </div>
 
         </div>

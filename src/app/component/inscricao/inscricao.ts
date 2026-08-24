@@ -20,7 +20,9 @@ export class Inscricao {
   atletaCadastrado = false
   buscarCpf = ''
   corridaEscolhida =  false
-  distaciaDisponiveis = false
+  distancia5km = false;
+  distancia10km = false;
+  distancia25km = false;
   kit = ''
   categoriaIdade = ''
 
@@ -73,7 +75,9 @@ export class Inscricao {
     inscricaoNewObg.atletaCadastrado = this.atletaCadastrado
     inscricaoNewObg.buscarCpf = this.buscarCpf
     inscricaoNewObg.corridaEscolhida = this.corridaEscolhida
-    inscricaoNewObg.distaciaDisponiveis = this.distaciaDisponiveis
+    inscricaoNewObg.distancia5km = this.distancia5km
+    inscricaoNewObg.distancia10km = this.distancia10km
+    inscricaoNewObg.distancia25km = this.distancia25km
     inscricaoNewObg.kit = this.kit
     inscricaoNewObg.categoriaIdade = this.categoriaIdade
 
@@ -84,7 +88,9 @@ export class Inscricao {
     this.atletaCadastrado = false
     this.buscarCpf = ''
     this.corridaEscolhida = false
-    this.distaciaDisponiveis = false
+    this.  distancia5km = false;
+  this.distancia10km = false;
+  this.distancia25km = false;
     this.kit = ''
     this.categoriaIdade = ''
   }
@@ -115,13 +121,18 @@ export class Inscricao {
     })
   }
 
-  preencherCpf(){
+  preencherCpf(idSelecionado: string | number){
     const atletaSelecionado = this.atletas.find(
-      atleta => String(atleta.id) === String(this.id)
-    )
+      atleta => String(atleta.id) === String(idSelecionado))
 
     if(atletaSelecionado){
       this.buscarCpf = String(atletaSelecionado.cpf)
+
+      console.log('Atleta selecionado:', atletaSelecionado);
+      console.log('CPF:', atletaSelecionado.cpf);
+
+      console.log(atletaSelecionado)
+      console.log(atletaSelecionado?.cpf)
     }
   }
 }

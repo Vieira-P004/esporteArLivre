@@ -35,7 +35,7 @@ export class CorridaLista {
   }
 
   excluir(objCorrida: Corrida){
-    if(confirm(`Deseja excluir a corrida ${objCorrida.descricaoCorrida}`)){
+    if(confirm(`Deseja excluir a corrida ${objCorrida.descricao_corrida}`)){
       this.corridaService.excluirCorrida(objCorrida.id)
       .subscribe({
         next:(respostaAPI) => {

@@ -12,8 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CorridaComponent {
    id= 0
-   descricaoCorrida = '400km'
-   dataCorrida = ''
+   descricao_corrida = 'São Cri Cri'
+   data_corrida = ''
    distancia5km = false
    distancia10km = false
    distancia25km = false
@@ -40,8 +40,8 @@ export class CorridaComponent {
 
    dadosFormulario(){
       const corrida = new Corrida() 
-      corrida.descricaoCorrida = this.descricaoCorrida
-      corrida.dataCorrida = this.dataCorrida
+      corrida.descricao_corrida = this.descricao_corrida
+      corrida.data_corrida = this.data_corrida
       corrida.distancia5km = this.distancia5km
       corrida.distancia10km = this.distancia10km
       corrida.distancia25km = this.distancia25km
@@ -77,8 +77,8 @@ export class CorridaComponent {
     this.corridaService.listarCorrida(idCorrida)
     .subscribe({
       next: (dadosCorrida) => {
-        this.descricaoCorrida = dadosCorrida.descricaoCorrida
-        this.dataCorrida = dadosCorrida.dataCorrida
+        this.descricao_corrida = dadosCorrida.descricao_corrida
+        this.data_corrida = dadosCorrida.data_corrida
         this.distancia5km = dadosCorrida.distancia5km
         this.distancia10km = dadosCorrida.distancia10km
         this.distancia25km = dadosCorrida.distancia25km
@@ -92,8 +92,8 @@ export class CorridaComponent {
   }
 
    limparDados(){
-      this.descricaoCorrida = ''
-      this.dataCorrida = ''
+      this.descricao_corrida = ''
+      this.data_corrida = ''
       this.distancia5km = false
       this.distancia10km = false
       this.distancia25km = false

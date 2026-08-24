@@ -6,6 +6,7 @@ import { HomeComponent } from './component/home-component/home-component';
 import { CorridaComponent } from './component/corrida/corrida-component/corrida-component';
 import { ListarCorrida } from './component/listar-corrida/listar-corrida';
 import { Inscricao } from './component/inscricao/inscricao';
+import { CorridaLista } from './component/corrida/corrida-lista/corrida-lista';
 
 export const routes: Routes = [
     {
@@ -40,7 +41,7 @@ export const routes: Routes = [
     },
     {
         path:"listarCorrida",
-        component:ListarCorrida
+        component:CorridaLista
     },
     {
         path:"inscricao",
