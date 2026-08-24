@@ -5,16 +5,17 @@
         <div class="formRow">
             <div class="formGroup">
                 <label for="atletaCadastrado">Atleta Cadastrado</label>
-                <select name="atletaCadastrado" id="">
+                <select name="atletaCadastrado" id="atletaCadastrado" [(ngModel)]="id" (change)="preencherCpf()">
                 <option value="" disabled selected>Selecione o Atleta</option>
-                <option ngFor="let atleta of atletas" value="atleta.id" >{{atleta.nome}}</option>
+                @for (atleta of atletas; track atleta.id) {
+                <option value="atleta.id" > {{atleta.nome}}  </option>
+                }
                 </select>
             </div>
             
             <div class="formGroup">
                 <label for="buscarCpf">Buscar por CPF</label>
-                <input type="text" name="buscarCpf" id="buscarCpf" placeholder="000.000.000-00">
-    
+                <input type="text" name="buscarCpf" id="buscarCpf" [(ngModel)]="buscarCpf"  maxlength="11" (input)="buscarAtletaPorCpf()" placeholder="Digite o CPF">
             </div>
         </div>
         
@@ -23,7 +24,10 @@
                 <label for="corridaEscolhida">Corrida Escolhida</label>
                 <select name="corridaEscolhida" id="corridaEscolhida" placeholder="Selecione o atleta">
                     <option value="" disabled selected>Selecione</option>
-                    <option ngFor="let corrida of corrida" value="corrida.id">{{corrida.nome}}</option>
+
+                    @for (corrida of corridas; track corrida.descricaoCorrida){
+                    <option ngFor="let corrida of corrida" value="corrida.id">{{corrida.descricaoCorrida}}</option>
+                    }
                 </select>
             </div>
     

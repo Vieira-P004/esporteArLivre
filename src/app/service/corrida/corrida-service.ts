@@ -13,33 +13,33 @@ export class CorridaService {
     }
 
     salvarCorrida(corrida: Corrida){
-        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/`
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida`
 
         return this.http.post<Corrida>(urlApi, corrida)
        
     }
 
     listarCorridas(){
-        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun`
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida`
 
         return this.http.get<Corrida[]>(urlApi)
     }
 
     listarCorrida(idCorrida: Number){
-        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${idCorrida}`
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${idCorrida}`
 
         return this.http.get<Corrida>(urlApi)
     }
 
     excluirCorrida(idCorrida: Number){
-        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${idCorrida}`
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${idCorrida}`
 
         return this.http.delete<Corrida>(urlApi)
         
     }
 
     alterarCorrida(corrida: Corrida){
-        const urlApi = `https://6a8629049c451dc67a646a3e.mockapi.io/pamelaRun/${corrida.id}`
+        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${corrida.id}`
 
         return this.http.put<Corrida>(urlApi, corrida)
     
