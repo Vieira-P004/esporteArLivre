@@ -20,9 +20,7 @@ export class Inscricao {
   atletaCadastrado = false
   buscarCpf = ''
   corridaEscolhida =  false
-  distancia5km = false;
-  distancia10km = false;
-  distancia25km = false;
+  distanciaSelecionada = false
   kit = ''
   categoriaIdade = ''
 
@@ -75,16 +73,22 @@ export class Inscricao {
     inscricaoNewObg.atletaCadastrado = this.atletaCadastrado
     inscricaoNewObg.buscarCpf = this.buscarCpf
     inscricaoNewObg.corridaEscolhida = this.corridaEscolhida
-    inscricaoNewObg.distancia5km = this.distancia5km
-    inscricaoNewObg.distancia10km = this.distancia10km
-    inscricaoNewObg.distancia25km = this.distancia25km
+    inscricaoNewObg.distanciaSelecionada = this.distanciaSelecionada
     inscricaoNewObg.kit = this.kit
     inscricaoNewObg.categoriaIdade = this.categoriaIdade
 
-    this.limparDados()
+    /*this.activeRoute.navigate(['/pagamento'], {
+      state:{
+        inscricao: inscricaoNewObg
+      }
+    })*/
 
-    console.log(this.atletaCadastrado, this.buscarCpf, this.corridaEscolhida, this.distancia5km, this.distancia10km, this.distancia25km, this.kit, this.categoriaIdade)
-    console.log(inscricaoNewObg.atletaCadastrado, inscricaoNewObg.buscarCpf, inscricaoNewObg.corridaEscolhida, inscricaoNewObg.distancia5km, inscricaoNewObg.distancia10km, inscricaoNewObg.distancia25km, inscricaoNewObg.kit, inscricaoNewObg.categoriaIdade)
+    console.log('atleta: ', this.atletaCadastrado)
+    console.log('CPF:', this.buscarCpf);
+  console.log('Corrida escolhida:', this.corridaEscolhida);
+  console.log('kms:', this.distanciaSelecionada);
+  console.log('Kit:', this.kit);
+  console.log('Categoria:', this.categoriaIdade);
    
   }
 
@@ -92,9 +96,7 @@ export class Inscricao {
     this.atletaCadastrado = false
     this.buscarCpf = ''
     this.corridaEscolhida = false
-    this.distancia5km = false;
-    this.distancia10km = false;
-    this.distancia25km = false;
+    this.distanciaSelecionada = false
     this.kit = ''
     this.categoriaIdade = ''
   }

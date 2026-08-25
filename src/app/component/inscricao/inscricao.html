@@ -15,7 +15,7 @@
                 </option>
 
                 @for (atleta of atletas; track $index) {
-                <option [value]="atleta.id" > {{atleta.nome}}  </option>
+                <option  [value]="atleta.id" > {{atleta.nome}}  </option>
                 }
                 </select>
             </div>
@@ -29,20 +29,20 @@
         <div class="formRow">
             <div class="formGroup">
                 <label for="corridaEscolhida">Corrida Escolhida</label>
-                <select name="corridaEscolhida" id="corridaEscolhida" placeholder="Selecione o atleta">
+                <select name="corridaEscolhida" id="corridaEscolhida" [(ngModel)]="corridaEscolhida" >
                     <option value="" disabled selected>Selecione</option>
 
-                    @for (corrida of corridas; track corrida.id){
-                    <option value="corrida.id">{{corrida.descricao_corrida}}</option>
+                    @for (corrida of corridas; track $index){
+                    <option [(ngModel)]="corridaEscolhida" value="corrida.id">{{corrida.descricao_corrida}}</option>
                     }
                 </select>
             </div>
     
             <div>
                 <label for="distaciaDisponiveis">Distância Disponíveis </label>
-                <input type="radio" id="distancia5km" name="distancia5km" value="5km">5km
-                <input type="radio" id="distancia10km" name="distancia10km" > 10km
-                <input type="radio" id="distancia25km" name="distancia25km" > 25km
+                <input type="radio" id="distancia5km" name="distancia5km" value="5km" [(ngModel)]="distanciaSelecionada" >5km
+                <input type="radio" id="distancia10km" name="distancia10km" value="10km" [(ngModel)]="distanciaSelecionada" > 10km
+                <input type="radio" id="distancia25km" name="distancia25km" value="25km" [(ngModel)]="distanciaSelecionada" > 25km
             </div>
 
         </div>
@@ -50,11 +50,11 @@
         <div class="formOther">
             <div class="formGroup">
                 <label for="kit">Tamanho da camiseta (kit)</label>
-                <select name="kit" id="kit">
-                    <option value="P">P</option>
-                    <option value="M">M</option>
-                    <option value="G">G</option>
-                    <option value="GG">GG</option>
+                <select name="kit" id="kit" [(ngModel)]="kit" >
+                    <option  value="p" [(ngModel)]="kit" >P</option>
+                    <option  value="m" [(ngModel)]="kit" >M</option>
+                    <option  value="g" [(ngModel)]="kit" >G</option>
+                    <option  value="gg" [(ngModel)]="kit" >GG</option>
                 </select>
     
             </div>
@@ -71,7 +71,7 @@
         </div>
 
         <div id="regulamento">
-            <input type="checkbox">Li e aceito os termos de regulamento da prova e declaração de saúde.
+            <input name="regulamento" type="checkbox">Li e aceito os termos de regulamento da prova e declaração de saúde.
         </div>
 
         <div id="divBtn">
