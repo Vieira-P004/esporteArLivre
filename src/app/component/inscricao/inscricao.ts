@@ -82,6 +82,10 @@ export class Inscricao {
     inscricaoNewObg.categoriaIdade = this.categoriaIdade
 
     this.limparDados()
+
+    console.log(this.atletaCadastrado, this.buscarCpf, this.corridaEscolhida, this.distancia5km, this.distancia10km, this.distancia25km, this.kit, this.categoriaIdade)
+    console.log(inscricaoNewObg.atletaCadastrado, inscricaoNewObg.buscarCpf, inscricaoNewObg.corridaEscolhida, inscricaoNewObg.distancia5km, inscricaoNewObg.distancia10km, inscricaoNewObg.distancia25km, inscricaoNewObg.kit, inscricaoNewObg.categoriaIdade)
+   
   }
 
   limparDados(){
