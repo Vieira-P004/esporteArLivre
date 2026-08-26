@@ -41,7 +41,7 @@ describe('CorridaLista', () => {
       expect(corridas[2].descricao_corrida).toBe('São Cri Cri')
     })
 
-    const request = httpMock.expectOne('https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/2')
+    const request = httpMock.expectOne('https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida')
 
     expect(request.request.method).toBe('GET')
     request.flush(corridaMock) //o que o flush faz??
