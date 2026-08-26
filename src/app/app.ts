@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { AtletaComponent } from './component/atleta-component/atleta-component';
+import { AtletaComponent } from '../app/component/atleta/atleta-component/atleta-component';
 import { MenuComponent } from './component/menu-component/menu-component';
 
 @Component({
