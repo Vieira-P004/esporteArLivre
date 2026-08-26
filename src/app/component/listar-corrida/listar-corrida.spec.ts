@@ -60,7 +60,7 @@ describe('ListarCorrida', () => {
         "rua_logradouro": "Rua Sei lá das quantas"
       }
       ]
-        service.listarAtletas.subscribe(atletas => {
+        service.listarAtletas().subscribe(atletas => {
           expect(atletas.length).toBe(2)
           expect(atletas[0].nome).toBe('João')
           expect(atletas[1].nome).toBe('Maria')
@@ -73,6 +73,7 @@ describe('ListarCorrida', () => {
         request.flush(atletasMosck)
         })
 
+        //TESTE PARA ADD O ATLETA
         it('deve adicionar uma pessoa', () => {
 
     const atleta: Atleta =   {
@@ -89,7 +90,7 @@ describe('ListarCorrida', () => {
       }
 
 
-    service.salvarAtleta(atleta).subscribe(atletas => {
+    service.adicionarAtleta(atleta).subscribe(atletas => {
 
       expect(atletas).toEqual(atletas);
 
@@ -108,42 +109,7 @@ describe('ListarCorrida', () => {
     request.flush(atleta);
   });
 
-  it('deve adicionar uma pessoa', () => {
-
-    const atleta: Atleta =   {
-        "nome": "Maria Flor",
-        "cpf": 12345678910,
-        "sexo": "M",
-        "cep": 49123123,
-        "bairro": "Centro",
-        "cidade": "Aracaju",
-        "uf": "Se",
-        "data_nascimento": "2000-02-25",
-        "id": 3,
-        "rua_logradouro": "Rua Sei lá das quantas"
-      }
-
-
-    service.salvarAtleta(atleta).subscribe(atletas => {
-
-      expect(atletas).toEqual(atletas);
-
-    });
-
-
-    const request = httpMock.expectOne(
-      'https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta'
-    );
-
-
-    expect(request.request.method).toBe('POST');
-
-    expect(request.request.body).toEqual(atleta);
-
-    request.flush(atleta);
-
-  });
-
+  //TESTE PARA EDITAR O ATLETA
   it('deve editar um atleta', () => {
 
    const atleta: Atleta =   {
@@ -156,7 +122,7 @@ describe('ListarCorrida', () => {
         "uf": "Se",
         "data_nascimento": "2000-02-25",
         "id": 1,
-        "ruaLogradouro": "Rua Sei lá das quantas"
+        "rua_logradouro": "Rua Sei lá das quantas"
    }
 
 
@@ -181,9 +147,24 @@ describe('ListarCorrida', () => {
 
   });
 
+  //TESTE PARA EXCLUIR O ATLETA
    it('deve excluir um atleta', () => {
+    const atleta: Atleta =   {
+        "nome": "João Souza",
+        "cpf": 12345678910,
+        "sexo": "M",
+        "cep": 49123123,
+        "bairro": "Centro",
+        "cidade": "Aracaju",
+        "uf": "Se",
+        "data_nascimento": "2000-02-25",
+        "id": 1,
+        "rua_logradouro": "Rua Sei lá das quantas"
+   }
 
-    service.excluirAtleta(1).subscribe();
+  service.excluirAtleta(atleta).subscribe(result => {
+    expect(result).toEqual(atleta)
+  })
 
 
     const request = httpMock.expectOne(
@@ -194,7 +175,7 @@ describe('ListarCorrida', () => {
     expect(request.request.method).toBe('DELETE');
 
 
-    request.flush(null);
+    request.flush(atleta);
 
   });
 });
