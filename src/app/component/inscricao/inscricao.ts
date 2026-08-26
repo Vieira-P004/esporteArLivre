@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InscricaoModels } from '../../models/inscricao';
 import { InscricaoService } from '../../service/inscricao/inscricao-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Atleta } from '../../models/Atleta';
 import { AtletaService } from '../../service/atleta-service';
 import { CorridaService } from '../../service/corrida/corrida-service';
@@ -32,6 +32,7 @@ export class Inscricao {
   constructor(
     private atletaService: AtletaService,
     private corridaService: CorridaService,
+    private router: Router,
     private inscricao: InscricaoService,
     private activeRoute: ActivatedRoute,
     private cdr: ChangeDetectorRef
@@ -77,11 +78,11 @@ export class Inscricao {
     inscricaoNewObg.kit = this.kit
     inscricaoNewObg.categoriaIdade = this.categoriaIdade
 
-    /*this.activeRoute.navigate(['/pagamento'], {
+    this.router.navigate(['/pagamento'], {
       state:{
         inscricao: inscricaoNewObg
       }
-    })*/
+    })
 
     console.log('atleta: ', this.atletaCadastrado)
     console.log('CPF:', this.buscarCpf);

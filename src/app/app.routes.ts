@@ -7,6 +7,7 @@ import { CorridaComponent } from './component/corrida/corrida-component/corrida-
 import { ListarCorrida } from './component/listar-corrida/listar-corrida';
 import { Inscricao } from './component/inscricao/inscricao';
 import { CorridaLista } from './component/corrida/corrida-lista/corrida-lista';
+import { Pagamento } from './component/pagamento/pagamento';
 
 export const routes: Routes = [
     {
@@ -46,5 +47,9 @@ export const routes: Routes = [
     {
         path:"inscricao",
         component:Inscricao
+    },
+    {
+        path:"pagamento",
+        component:Pagamento
     }
 ];
