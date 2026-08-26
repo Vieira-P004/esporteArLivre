@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { AtletaService } from '../../service/atleta-service';
 import { Atleta } from '../../models/Atleta';
 import { Router } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 
 @Component({
@@ -18,8 +19,9 @@ export class ListarCorrida {
 
   //DECLARAÇÃO CONSTRUTOR
   constructor(  
+    private listaService: AtletaService,
     private router: Router, 
-    private http: AtletaService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   //EXECUTAR INSTRUÇÕES AO CARREGAR CRIAR O COMPONENTE
@@ -29,11 +31,13 @@ export class ListarCorrida {
 
   //LISTAR OS ATLETAS
   listarAtletas() {
-    this.http.listarAtletas()
+    this.listaService.listarAtletas()
       .subscribe({
         next: (dados) => {
           //this.listaAtletas = [...dados].sort((a, b) => a.nome.localeCompare(b.nome))
           this.listaAtletas.set([...dados].sort((a, b) => a.nome.localeCompare(String(b.nome))))
+
+          this.cdr.detectChanges()
         },
         error: (msgErro) => {
           console.log("Erro ao cadastrar  o atleta ", msgErro)
@@ -46,7 +50,7 @@ export class ListarCorrida {
   //EXCLUIR ATLETA
   excluirAtleta(atleta: Atleta){
     if(confirm(`Deseja excluir ${atleta.nome} da competição? `)){
-      this.http.exluirAtleta(atleta)
+      this.listaService.excluirAtleta(atleta)
       .subscribe({
         next:(dados)=>{
            this.listaAtletas.update(elem =>
@@ -62,21 +66,6 @@ export class ListarCorrida {
 
     }
     this.ngOnInit()
-  }
-
-  calcularIdade(data_nascimento: string): number{
-    const nascimento = new Date (data_nascimento)
-    const hoje =  new Date()
-
-    let idade = hoje.getFullYear() - nascimento.getFullYear()
-    const mes = hoje.getMonth() - nascimento.getMonth()
-
-    if(mes < 0 || mes === 0 && hoje.getDate() < nascimento.getDate()){
-      idade--
-    }
-
-    console.log('datinha: ',data_nascimento)
-    return idade
   }
 
   //ALTERAR DADOS

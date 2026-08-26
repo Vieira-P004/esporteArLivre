@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Corrida } from '../../models/corrida';
-import { execFile } from 'child_process';
 
 @Injectable({
     providedIn: 'root',

@@ -31,8 +31,13 @@ export class AtletaService {
     return this.http.get<Atleta>(urlApi)
   }
 
+  salvarAtleta(atleta: Atleta): Observable<Atleta> {
+    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/`
+    return this.http.post<Atleta>(urlApi, atleta)
+  }
+
   //EXCLUIR NA API
-  exluirAtleta(atleta: Atleta): Observable<Atleta> {
+  excluirAtleta(atleta: Atleta): Observable<Atleta> {
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${atleta.id}`
 
     return this.http.delete<Atleta>(urlApi)
@@ -43,6 +48,21 @@ export class AtletaService {
     const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${atleta.id}`
 
     return this.http.put<Atleta>(urlApi, atleta)
+  }
+
+  calcularIdade(data_nascimento: string): number{
+    const nascimento = new Date (data_nascimento)
+    const hoje =  new Date()
+
+    let idade = hoje.getFullYear() - nascimento.getFullYear()
+    const mes = hoje.getMonth() - nascimento.getMonth()
+
+    if(mes < 0 || mes === 0 && hoje.getDate() < nascimento.getDate()){
+      idade--
+    }
+
+    console.log('datinha: ',data_nascimento)
+    return idade
   }
 
   /*
