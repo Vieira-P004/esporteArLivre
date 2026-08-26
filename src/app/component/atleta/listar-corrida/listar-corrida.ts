@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { AtletaService } from '../../service/atleta-service';
-import { Atleta } from '../../models/Atleta';
+import { AtletaService } from '../../../service/atleta-service';
+import { Atleta } from '../../../models/Atleta';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 
@@ -73,5 +73,7 @@ export class ListarCorrida {
     this.router.navigate(['/cadastroAtleta', idAtleta])
   }
 
-  
+  calcularIdade(data_nascimento: string){
+    this.listaService.calcularIdade(data_nascimento)
+  }
 }

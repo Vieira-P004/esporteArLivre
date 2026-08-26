@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
 
-import { AtletaComponent } from './component/atleta-component/atleta-component';
+import { AtletaComponent } from '../app/component/atleta/atleta-component/atleta-component';
 import { HomeComponent } from './component/home-component/home-component';
 import { CorridaComponent } from './component/corrida/corrida-component/corrida-component';
-import { ListarCorrida } from './component/listar-corrida/listar-corrida';
+import { ListarCorrida } from '../app/component/atleta/listar-corrida/listar-corrida'
 import { Inscricao } from './component/inscricao/inscricao';
 import { CorridaLista } from './component/corrida/corrida-lista/corrida-lista';
 import { Pagamento } from './component/pagamento/pagamento';

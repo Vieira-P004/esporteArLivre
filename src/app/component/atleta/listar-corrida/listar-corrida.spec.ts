@@ -2,8 +2,8 @@ import {  TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 
-import { AtletaService} from '../../service/atleta-service';
-import { Atleta } from '../../models/Atleta';
+import { AtletaService} from '../../../service/atleta-service';
+import { Atleta } from '../../../models/Atleta';
 
 
 describe('ListarCorrida', () => {
