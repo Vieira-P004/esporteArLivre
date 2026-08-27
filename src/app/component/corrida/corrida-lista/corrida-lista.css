@@ -1,0 +1,19 @@
+#div-lista{
+    width: 1000px;
+    min-height: 300px;
+    padding: 25px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20)
+}
+
+
+
+.dadosCorrida{
+    display: block;
+    background-color: #eeeeee;
+    height: 35px;
+    width: 700px;
+    border-radius: 5px;
+}

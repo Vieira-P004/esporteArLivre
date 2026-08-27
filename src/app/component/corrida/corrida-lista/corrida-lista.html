@@ -1,4 +1,4 @@
-<div id="divLista">
+<div id="div-lista">
     <h2>Lista Corrida</h2>
 
     <div id="listaCorrida">
@@ -6,7 +6,7 @@
 
             @for(elem of listarCorridas(); track elem.id){
                 <div class="itemCorrida"> 
-                    <span class="dadosCorrida">
+                    <span class="dadosForm">
                         <span class="dadosCorrida" >
                             {{elem.descricao_corrida}} - {{elem.data_corrida}} - Distâncias: {{elem.distancia5km ? '5km':''}} 
                             {{elem.distancia10km ? ' 10km':''}}
