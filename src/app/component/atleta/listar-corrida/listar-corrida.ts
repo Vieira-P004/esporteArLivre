@@ -74,6 +74,6 @@ export class ListarCorrida {
   }
 
   calcularIdade(data_nascimento: string){
-    this.listaService.calcularIdade(data_nascimento)
+    return this.listaService.calcularIdade(data_nascimento)
   }
 }
