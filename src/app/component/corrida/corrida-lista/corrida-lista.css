@@ -1,19 +1,92 @@
-#div-lista{
+#div-lista {
     width: 1000px;
-    min-height: 300px;
     padding: 25px;
-    margin: auto;
-    border-radius: 10px;
+    margin: 20px auto;
     background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20)
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20);
+    box-sizing: border-box;
 }
 
+#div-lista h2 {
+    margin: 0px 0px 20px 0px;
+    color: var(--cor-secundaria, #1a3d5c);
+    font-size: 1.5rem;
+}
 
+#listaCorrida {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-.dadosCorrida{
-    display: block;
-    background-color: #eeeeee;
-    height: 35px;
-    width: 700px;
-    border-radius: 5px;
+.itemCorrida {
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.itemCorrida:hover {
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.15);
+    transform: translateY(-1px);
+}
+
+.dadosForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.dadosCorrida {
+    color: #333;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.linksLista {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.linkEditar,
+.linkExcluir {
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.linkEditar {
+    background-color: #2c5f8a;
+    color: #ffffff;
+}
+
+.linkEditar:hover {
+    opacity: 0.85;
+}
+
+.linkExcluir {
+    background-color: #d64545;
+    color: #ffffff;
+}
+
+.linkExcluir:hover {
+    opacity: 0.85;
+}
+
+.divSemRegistro {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 0.95rem;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
 }

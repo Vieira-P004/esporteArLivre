@@ -1,56 +1,92 @@
-#card{
-    background-color: #fff;
-    width: 1000px;
-    min-height: 450px;
-    margin: 40px auto;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20);
-    border-radius: 5px;
-    box-sizing: border-box; 
-
-}
-
-#div-lista{
+#div-lista {
     width: 1000px;
     padding: 25px;
     margin: 20px auto;
-    color: var( --cor-secundaria);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20);
+    box-sizing: border-box;
 }
 
-h2{
-    margin: 30px 0px;
+#div-lista h2 {
+    margin: 0px 0px 20px 0px;
+    color: var(--cor-secundaria, #1a3d5c);
+    font-size: 1.5rem;
 }
 
-.item-atletas{
-    margin: 20px 0px;
-    padding: 10px;
+#listaAtletas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.itemAtletas {
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    padding: 15px 20px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.itemAtletas:hover {
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.15);
+    transform: translateY(-1px);
+}
+
+.dadosForm {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/*FORMATAÇÃO DOS BOTÕES*/
-.lnk-editar, .lnk-excluir {
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100px;
-    text-align: center;
-    margin: 8px 0px;
-    transition: opacity 0.5s ease;
-    letter-spacing: 3px;
+.dadosAtleta {
+    color: #333;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.linksLista {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.linkEditar,
+.linkExcluir {
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
-a:hover {
-    opacity: 0.5;
+.linkEditar {
+    background-color: #2c5f8a;
+    color: #ffffff;
 }
 
-.lnk-editar {
-    margin-right: 10px;
-    color: var(  --cor-primaria);
+.linkEditar:hover {
+    opacity: 0.85;
 }
 
-.lnk-excluir {
-    margin-left: 10px;
-    color: var( --cor-botao2);
+.linkExcluir {
+    background-color: #d64545;
+    color: #ffffff;
+}
+
+.linkExcluir:hover {
+    opacity: 0.85;
+}
+
+.divItemCorrida {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 0.95rem;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
 }

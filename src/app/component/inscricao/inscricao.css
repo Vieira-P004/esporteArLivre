@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+#inscricao{
+    margin: 0px 0px 20px 0px;
+    color: var(--cor-secundaria, #1a3d5c);
+    font-size: 1.5rem;
+}
+
 input, select{
     height: 30px;
     border: 1px #d1d5db solid;
@@ -36,9 +42,9 @@ input, select{
 #valorInscricao{
     margin-top: 15px;
     display: flex;
-    gap: 650px;
     border: 1px solid #d1d5db;
     border-radius: 5px;
+    height: 100%;
 }
 
 #numero{
@@ -58,4 +64,16 @@ button{
 
 button:hover{
     background-color: #0982C8;
+}
+
+#miniContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#regulamento, #distancias {
+    display: flex;
+    align-items: center;
 }

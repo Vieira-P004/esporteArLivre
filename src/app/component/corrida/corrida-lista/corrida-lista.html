@@ -3,7 +3,6 @@
 
     <div id="listaCorrida">
         
-
             @for(elem of listarCorridas(); track elem.id){
                 <div class="itemCorrida"> 
                     <span class="dadosForm">
@@ -19,11 +18,10 @@
                     </span>
                 </div>
             }@empty{
-                <div class="divItemCorrida">
+                <div class="divSemRegistro">
                     NENHUM REGISTRO NA LISTA
                 </div>
             }
 
-        
     </div>
 </div>

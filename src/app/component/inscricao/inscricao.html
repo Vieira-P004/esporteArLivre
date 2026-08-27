@@ -1,5 +1,5 @@
 <div id="divForm">
-    <h2>Inscrição</h2>
+    <h2 id="inscricao" >Inscrição</h2>
     <form id="formInscricao" (submit)="formInscricao()">
         
         <div class="formRow">
@@ -38,8 +38,8 @@
                 </select>
             </div>
     
-            <div>
-                <label for="distaciaDisponiveis">Distância Disponíveis </label>
+            <div id="distancias">
+                <label for="distaciaDisponiveis">Distância Disponíveis: </label>
                 <input type="radio" id="distancia5km" name="distancia5km" value="5km" [(ngModel)]="distanciaSelecionada" >5km
                 <input type="radio" id="distancia10km" name="distancia10km" value="10km" [(ngModel)]="distanciaSelecionada" > 10km
                 <input type="radio" id="distancia25km" name="distancia25km" value="25km" [(ngModel)]="distanciaSelecionada" > 25km
@@ -66,8 +66,10 @@
         </div>
 
         <div id="valorInscricao">
-            <h2>Valor da inscrição:</h2>
-            <h2 id="numero">89,90</h2>
+            <div id="miniContainer">
+                <h2>Valor da inscrição:</h2>
+                <h2 id="numero">89,90</h2>
+            </div>
         </div>
 
         <div id="regulamento">

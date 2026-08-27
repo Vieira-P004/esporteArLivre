@@ -19,6 +19,12 @@
     box-sizing: border-box;
 }
 
+h2{
+    margin: 0px 0px 20px 0px;
+    color: var(--cor-secundaria, #1a3d5c);
+    font-size: 1.5rem;
+}
+
 .formRow{
     display: grid;
     grid-template-columns: 470px 470px;
@@ -35,12 +41,12 @@
 .formGroup{
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .formGroup label{
     font-size: 12px;
     color: #374151;
+    margin-top: 10px;
 }
 
 .formGroup input,.formGroup select{
@@ -57,14 +63,11 @@ button{
     height: 35px;
     cursor: pointer;
     margin: 40px 220px;
-    background-color: var(--botao);
-}
-
-button:hover{
-    background-color: #0982C8;
+    
 }
 
 #btnAdd{
+    background-color: var(--botao);
     margin-right: 50px;
     color: #fff;
     border: none;
@@ -72,8 +75,13 @@ button:hover{
 }
 
 #btnLimpar{
+    background-color: #d64545;
     margin-left: 10px;
     color: #fff;
     border: none;
     border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.85;
 }

@@ -1,19 +1,20 @@
 <div id="div-lista">
-    <h2>Lista Atleta</h2>
-
-      <div id="lista-atletas">
+      <div id="listaAtletas">
+        <h2>Lista Atleta</h2>
         @for (elem of listaAtletas(); track elem.id) {
-        <div class="item-atletas">
-            <span class="dados-atleta">
-                {{elem.id}} | Nome: {{elem.nome}} | idade: {{calcularIdade(elem.data_nascimento)}} | CPF: {{elem.cpf}} | Sexo: {{elem.sexo}} | Cidade: {{elem.cidade}}-{{elem.uf}}
-            </span>
-            <span class="links-lista">
-                <a class="lnk-editar" (click)="buscarAtleta(elem)"> Editar </a>
-                <a class="lnk-excluir" (click)="excluirAtleta(elem)"> Excluir </a>
+        <div class="itemAtletas">
+            <span class="dadosForm">
+                <span class="dadosAtleta">
+                    {{elem.id}} | Nome: {{elem.nome}} | idade: {{calcularIdade(elem.data_nascimento)}} | CPF: {{elem.cpf}} | Sexo: {{elem.sexo}} | Cidade: {{elem.cidade}}-{{elem.uf}}
+                </span>
+                <span class="linksLista">
+                    <a class="linkEditar" (click)="buscarAtleta(elem)"> Editar </a>
+                    <a class="linkExcluir" (click)="excluirAtleta(elem)"> Excluir </a>
+                </span>
             </span>
         </div>
         }@empty{
-        <div class="div-item-pessoa">
+        <div class="divSemRegistro">
             NENHUM REGISTRO NA LISTA
         </div>
         }

@@ -5,7 +5,14 @@
     margin: auto;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20)
+    box-shadow: 0 2px 8px rgba(5, 73, 112, 0.20);
+    box-sizing: border-box;
+}
+
+h2{
+    margin: 0px 0px 20px 0px;
+    color: var(--cor-secundaria, #1a3d5c);
+    font-size: 1.5rem;
 }
 
 label{

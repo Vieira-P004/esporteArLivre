@@ -21,6 +21,7 @@ p{
 #tituloNome{
     text-transform: uppercase;
     margin: 0px 20px;
+    height: 30px;
     color: aliceblue;
     border: 1px solid grey;
     padding: 25px;
