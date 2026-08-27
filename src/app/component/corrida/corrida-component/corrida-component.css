@@ -22,13 +22,13 @@ label{
 
 #descricao_corrida{
     border-radius: 5px;
-    width: 1000px;
+    width: 950px;
     height: 100px;
     border: 1px solid #d1d5db;
 }
 
 #data_corrida{
-    width: 1000px;
+    width: 950px;
     height: 35px;
     border: 1px solid #d1d5db;
     border-radius: 5px;
