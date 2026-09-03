@@ -14,8 +14,10 @@ export class AtletaComponent {
 
   id = 0
   nome = ''
-  data_nascimento = ''
   cpf = 0
+  data_nascimento = ''
+  peso = 0
+  altura = 0
   sexo = ''
   cep = 0
   ruaLogradouro = ''
@@ -56,8 +58,10 @@ export class AtletaComponent {
         next: (objAtleta) => {
           this.id = objAtleta.id
           this.nome = objAtleta.nome
-          this.data_nascimento = objAtleta.data_nascimento
           this.cpf = objAtleta.cpf
+          this.data_nascimento = objAtleta.data_nascimento
+          this.peso = objAtleta.peso
+          this.altura = objAtleta.altura
           this.sexo = objAtleta.sexo
           this.cep = objAtleta.cep
           this.ruaLogradouro = objAtleta.rua_logradouro
@@ -76,8 +80,10 @@ export class AtletaComponent {
      const pessoaAtleta = new Atleta()
 
     pessoaAtleta.nome = this.nome
-    pessoaAtleta.data_nascimento = this.data_nascimento
     pessoaAtleta.cpf = this.cpf
+    pessoaAtleta.data_nascimento = this.data_nascimento
+    pessoaAtleta.peso = this.peso
+    pessoaAtleta.altura = this.altura
     pessoaAtleta.sexo = this.sexo
     pessoaAtleta.cep = this.cep
     pessoaAtleta.rua_logradouro = this.ruaLogradouro
@@ -92,7 +98,7 @@ export class AtletaComponent {
             console.log(resposta)
           },
           error: (msgErro) => {
-            console.log("Erro ao cadastrar  o atleta ", msgErro)
+            document.write("Erro ao cadastrar  o atleta ", msgErro)
           }
         })
     } else {
@@ -129,8 +135,10 @@ export class AtletaComponent {
 
   limparAtributos(){
     this.nome = ''
-    this.data_nascimento = ''
     this.cpf = 0
+    this.data_nascimento = ''
+    this.peso = 0
+    this.altura = 0.0 
     this.sexo = ''
     this.cep = 0
     this.ruaLogradouro = ''
