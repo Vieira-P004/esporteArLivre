@@ -11,33 +11,33 @@ export class CorridaService {
     }
 
     salvarCorrida(corrida: Corrida){
-        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida`
+        const urlApi = `http://127.0.0.1:8000/corrida/`
 
         return this.http.post<Corrida>(urlApi, corrida)
        
     }
 
     listarCorridas(){
-        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida`
+        const urlApi = `http://127.0.0.1:8000/corrida/`
 
         return this.http.get<Corrida[]>(urlApi)
     }
 
     listarCorrida(idCorrida: Number){
-        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${idCorrida}`
+        const urlApi = `http://127.0.0.1:8000/corrida/${idCorrida}`
 
         return this.http.get<Corrida>(urlApi)
     }
 
     excluirCorrida(idCorrida: Number){
-        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${idCorrida}`
+        const urlApi = `http://127.0.0.1:8000/corrida/${idCorrida}`
 
         return this.http.delete<Corrida>(urlApi)
         
     }
 
     alterarCorrida(corrida: Corrida){
-        const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/corrida/${corrida.id}`
+        const urlApi = `http://127.0.0.1:8000/corrida/${corrida.id}`
 
         return this.http.put<Corrida>(urlApi, corrida)
     
