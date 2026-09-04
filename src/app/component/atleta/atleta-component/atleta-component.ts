@@ -121,6 +121,13 @@ export class AtletaComponent {
 
   }
 
+  imc(peso: number , altura : number):number{
+
+    let IMC = (peso / (altura * altura))
+
+    return IMC 
+  }
+
   listaAtleta(idAtleta: number) {
     this.atletaService.listarAtleta(idAtleta)
       .subscribe({
