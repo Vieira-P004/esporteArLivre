@@ -20,7 +20,7 @@ export class AtletaComponent {
   altura = 0
   sexo = ''
   cep = 0
-  ruaLogradouro = ''
+  rua_logradouro = ''
   bairro = ''
   cidade = ''
   uf = ''
@@ -37,7 +37,7 @@ export class AtletaComponent {
 
   //DECLARANDO AS FUNÇÕES
   exibirDados(){
-    console.log(this.nome,this.data_nascimento ,this.cpf, this.cep, this.sexo, this.ruaLogradouro, this.bairro, this.cidade, this.uf)
+    console.log(this.nome,this.data_nascimento ,this.cpf, this.cep, this.sexo, this.rua_logradouro, this.bairro, this.cidade, this.uf)
   }
 
   //Professor
@@ -64,7 +64,7 @@ export class AtletaComponent {
           this.altura = objAtleta.altura
           this.sexo = objAtleta.sexo
           this.cep = objAtleta.cep
-          this.ruaLogradouro = objAtleta.rua_logradouro
+          this.rua_logradouro = objAtleta.rua_logradouro
           this.bairro = objAtleta.bairro
           this.cidade = objAtleta.cidade
           this.uf = objAtleta.uf
@@ -86,7 +86,7 @@ export class AtletaComponent {
     pessoaAtleta.altura = this.altura
     pessoaAtleta.sexo = this.sexo
     pessoaAtleta.cep = this.cep
-    pessoaAtleta.rua_logradouro = this.ruaLogradouro
+    pessoaAtleta.rua_logradouro = this.rua_logradouro
     pessoaAtleta.bairro = this.bairro
     pessoaAtleta.cidade = this.cidade
     pessoaAtleta.uf = this.uf
@@ -98,7 +98,7 @@ export class AtletaComponent {
             console.log(resposta)
           },
           error: (msgErro) => {
-            document.write("Erro ao cadastrar  o atleta ", msgErro)
+            console.error("Erro ao cadastrar  o atleta ", msgErro)
           }
         })
     } else {
@@ -141,7 +141,7 @@ export class AtletaComponent {
     this.altura = 0.0 
     this.sexo = ''
     this.cep = 0
-    this.ruaLogradouro = ''
+    this.rua_logradouro = ''
     this.bairro = ''
     this.cidade = ''
     this.uf = ''

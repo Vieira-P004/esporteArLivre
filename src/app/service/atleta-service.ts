@@ -9,43 +9,44 @@ import { HttpClient } from '@angular/common/http';
 export class AtletaService {
      //DECLARAÇÃO CONSTRUTOR
   constructor(private http: HttpClient) { }
+  private urlApi = 'http://127.0.0.1:8000/pessoa/'
 
   //ADICIONAR NA API
   adicionarAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/cadstrar_pessoa__post`
+    
 
-    return this.http.post<Atleta>(urlApi, atleta)
+    return this.http.post<Atleta>(`${this.urlApi}`, atleta)
   }
 
   //LISTAR ATLETAS NA API
   listarAtletas(): Observable<Atleta[]> {
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/listar_pessoa__get`
+    const urlApi = `http://127.0.0.1:8000/pessoa/`
 
     return this.http.get<Atleta[]>(urlApi)
   }
 
   //LISTAR ATLETA
   listarAtleta(idAtleta: number):Observable<Atleta>{
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/listar_id_pessoa__id__get/${idAtleta}`
+    const urlApi = `http://127.0.0.1:8000/pessoa/${idAtleta}`
 
     return this.http.get<Atleta>(urlApi)
   }
 
   salvarAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/cadstrar_pessoa__post`
-    return this.http.post<Atleta>(urlApi, atleta)
+    
+    return this.http.post<Atleta>(`${this.urlApi}`, atleta)
   }
 
   //EXCLUIR NA API
   excluirAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/excluir_pessoa__id__delete/${atleta.id}`
+    const urlApi = `http://127.0.0.1:8000/pessoa/${atleta.id}`
 
     return this.http.delete<Atleta>(urlApi)
   }
 
   //ALTERAR NA API
   alterarAtleta(atleta: Atleta):Observable<Atleta>{
-    const urlApi = `http://127.0.0.1:8000/docs#/Pessoa/alterar_pessoa__id__put/${atleta.id}`
+    const urlApi = `http://127.0.0.1:8000/pessoa/${atleta.id}`
 
     return this.http.put<Atleta>(urlApi, atleta)
   }
