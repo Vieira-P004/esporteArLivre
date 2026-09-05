@@ -121,9 +121,11 @@ export class AtletaComponent {
 
   }
 
-  imc(peso: number , altura : number):number{
+  imc(pesoAtleta : number, alturaAtleta : number){
+    pesoAtleta = this.peso;
+    alturaAtleta = this.altura
 
-    let IMC = (peso / (altura * altura))
+    let IMC = (pesoAtleta / (alturaAtleta * alturaAtleta))
 
     return IMC 
   }

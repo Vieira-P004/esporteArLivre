@@ -5,7 +5,7 @@
         <div class="itemAtletas">
             <span class="dadosForm">
                 <span class="dadosAtleta">
-                    {{elem.id}} | Nome: {{elem.nome}} | idade: {{calcularIdade(elem.data_nascimento)}} | CPF: {{elem.cpf}} | Sexo: {{elem.sexo}} | Cidade: {{elem.cidade}}-{{elem.uf}}
+                    {{elem.id}} | Nome: {{elem.nome}} | idade: {{calcularIdade(elem.data_nascimento)}} | CPF: {{elem.cpf}} | Sexo: {{elem.sexo}} | IMC: {{imc(elem.peso, elem.altura)}} | Cidade: {{elem.cidade}}-{{elem.uf}}
                 </span>
                 <span class="linksLista">
                     <a class="linkEditar" (click)="buscarAtleta(elem)"> Editar </a>

@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { AtletaService } from '../../../service/atleta-service';
+import { AtletaComponent } from '../atleta-component/atleta-component';
 import { Atleta } from '../../../models/Atleta';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
@@ -19,6 +20,7 @@ export class ListarCorrida {
 
   //DECLARAÇÃO CONSTRUTOR
   constructor(  
+    private listarAtleta: AtletaComponent,
     private listaService: AtletaService,
     private router: Router, 
     private cdr: ChangeDetectorRef
@@ -75,5 +77,9 @@ export class ListarCorrida {
 
   calcularIdade(data_nascimento: string){
     return this.listaService.calcularIdade(data_nascimento)
+  }
+
+  imc(peso: string, altura: string):number {
+    return this.listarAtleta.imc(Number(peso), Number(altura))
   }
 }
